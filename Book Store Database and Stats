@@ -1,0 +1,29 @@
+
+/** book_inventory:
+Snow Crash (4) 1.99 7.99
+Dream Warrior (5) 1.99 7.99
+Thornback Lover (10) 1.99 7.99
+Love Revived (10) 1.99 7.99
+Skyward (5) 1.99 7.99
+Alex Cross (10) 1.99 7.99
+Ravenboys (5) 1.99 7.99
+City of Bones (6) 1.99 7.99
+Anna Dressed In Blood (15) 1.99 7.99
+Storm Crow (5) 1.99 7.99
+Death (15) 1.99 7.99
+Dead Man Walking (5) 1.99 7.99
+BOOK STAND (5) 5.99 15.99
+Book Light (10) 1.99 7.99
+Bookmark (15) 1.99 7.99
+**/
+
+CREATE TABLE book_inventory (id INTEGER PRIMARY KEY, items TEXT, qauntity INTEGER, costs INTEGER, price INTEGER);
+
+INSERT INTO book_inventory VALUES (1, "Snow Crash", 4, 1.99, 7.99); INSERT INTO book_inventory VALUES (2, "Dream Warrior", 5, 1.99, 7.99); INSERT INTO book_inventory VALUES (3, "Thornback Lover", 10, 1.99, 7.99); INSERT INTO book_inventory VALUES (4, "Love Revived", 10, 1.99, 7.99); INSERT INTO book_inventory VALUES (5, "Skyward", 5, 1.99, 7.99); INSERT INTO book_inventory VALUES (6, "Alex Cross", 10, 1.99, 7.99); INSERT INTO book_inventory VALUES (7, "Ravenboys", 5, 1.99, 7.99);
+INSERT INTO book_inventory VALUES (8, "City of Bones", 6, 1.99, 7.99); INSERT INTO book_inventory VALUES (9, "Anna Dressed In Blood", 15, 1.99, 7.99); INSERT INTO book_inventory VALUES (10, "Storm Crow", 5, 1.99, 7.99); INSERT INTO book_inventory VALUES (11, "Death", 15, 1.99, 7.99); INSERT INTO book_inventory VALUES (12, "Dead Man Walking", 5, 1.99, 7.99); INSERT INTO book_inventory VALUES (13, "Book Stand", 5, 5.99, 15.99); INSERT INTO book_inventory VALUES (14, "Book Light", 10, 1.99, 7.99); INSERT INTO book_inventory VALUES (15, "Bookmarks", 15, 1.99, 7.99);
+
+--display the database.
+SELECT * FROM book_inventory;
+
+--total units in inventory.
+SELECT SUM (qauntity) FROM book_inventory;
