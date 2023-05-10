@@ -1,0 +1,24 @@
+--Show Customers (their full names, customer ID, and country) who are not in the US.
+SELECT firstname, lastname, customerID, country
+FROM customers
+WHERE country <> 'USA';
+
+--Show only the Customers from Brazil
+SELECT firstname, lastname, customerID, country
+FROM customers
+WHERE country = 'Brazil';
+
+--Find the Invoices of customers who are from Brazil. The resulting table should show the customer's full name, Invoice ID, Date of the invoice, and billing country.
+
+SELECT customers.firstname, customers.lastname, invoices.InvoiceID, invoices.InvoiceDate, invoices.BillingCountry
+FROM customers, invoices
+WHERE customers.CustomerID=InvoiceID
+AND invoices.BillingCountry='Brazil';
+
+--Show the Employees who are Sales Agents.
+SELECT FirstName, LastName, Title 
+FROM employees
+WHERE Title ='Sales Support Agent';
+
+--How many Invoices were there in 2009?
+SELECT COUNT(*), InvoiceID, InvoiceDate, BillingCountry FROM invoices WHERE strftime('%Y', invoiceDate) = '2009';
